@@ -8,8 +8,11 @@
     
     <!-- 工具栏 -->
     <div id="tool-bar">
+      <ToolBar />
       <!-- 工具栏内容 -->
     </div>
+
+
     
     <!-- 主内容区 -->
     <div id="main-content" style="display: flex;">
@@ -39,6 +42,8 @@ console.log(draw2d)
 import imagePath from '@/assets/logo.png';
 import MenuBar from './components/MenuBar.vue';
 import leftSideBar from './components/leftSideBar.vue';
+import ToolBar from './components/ToolBar.vue';
+
 
 
 // $.fn.draggable = () => {}
@@ -188,13 +193,13 @@ var height = container.clientHeight;
 
 #menu-bar {
   height: 20px;
-  background-color: #333;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 #tool-bar {
-  height: 20px;
-  background-color: #444;
+  height: 40px;
+  background-color: white;
   color: white;
 }
 

@@ -4,7 +4,7 @@
       <li @mouseover="showFileMenu = true" @mouseleave="showFileMenu = false">
         File
         <ul v-if="showFileMenu" class="dropdown">
-          <li >Import</li>
+          <li>Import</li>
           <li @click="importPDKLibrary">Import PDK Library</li>
           <li @click="save">Save</li>
           <li @click="saveAs">Save As</li>
@@ -14,14 +14,13 @@
       <li>View</li>
     </ul>
   </div>
+  <el-button round>Round</el-button>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
 const showFileMenu = ref(false);
-
-
 
 const importPDKLibrary = () => {
   console.log('Import PDK Library clicked');
@@ -41,9 +40,9 @@ const saveAs = () => {
 
 <style scoped>
 #menu-bar {
-    width: 100%;
-  background-color: #333;
-  color: white;
+  width: 100%;
+  background-color: white;
+  color: black;
 }
 
 #menu-bar ul {
@@ -56,21 +55,23 @@ const saveAs = () => {
   display: inline-block;
   position: relative;
   cursor: pointer;
+  margin-right: 10px; /* 增加间距 */
+  
 }
 
 #menu-bar .dropdown {
   position: absolute;
-  background-color: #444;
-  min-width: 100px;
+  background-color: white;
+  min-width: 200px;
   z-index: 1;
 }
 
 #menu-bar .dropdown li {
   display: block;
-  color: white;
+  color: black;
 }
 
 #menu-bar .dropdown li:hover {
-  background-color: #555;
+  background-color: #3889f3;
 }
 </style>
